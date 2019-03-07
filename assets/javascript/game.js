@@ -7,7 +7,12 @@ var counter = 0;
 
 var beginGame = function() {
   $(".crystals").empty();
-  var images = ["", "", "", ""];
+  var images = [
+    "./assets/images/1-CrystalCollector.jpg",
+    "./assets/images/1-CrystalCollector.jpg",
+    "./assets/images/1-CrystalCollector.jpg",
+    "./assets/images/1-CrystalCollector.jpg"
+  ];
 
   random_result = Math.floor(Math.random() * 69) + 30;
 
@@ -19,8 +24,8 @@ var beginGame = function() {
     var random = Math.floor(Math.random() * 11) + 1;
     console.log(random);
 
-    var crystal = $("<div>");
-    crystal.attr({ class: "crystal", "data-random": random });
+    var crystal = $("<img>");
+    crystal.attr({ class: "crystal", "data-random": random, src: images[i] });
     // crystal.html(random);
     $(".crystals").append(crystal);
     //   console.log("Game");
